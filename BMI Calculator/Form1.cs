@@ -7,6 +7,7 @@
             InitializeComponent();
         }
        float result;
+#region category
         public void Category()
         {
             if (result > 40)
@@ -34,11 +35,14 @@
                 WeightC_Label.Text = "Aşağı çəkili";
             }
         }
+        #endregion
+        #region BMI
         public void BMI()
         {
             result = float.Parse(textBoxHeight.Text) / ((float.Parse(textBoxWeight.Text) / 100) * (float.Parse(textBoxWeight.Text) / 100));
             Result_Label.Text = result.ToString();
         }
+#endregion
         private void Calc_button_Click(object sender, EventArgs e)
         {
             try
